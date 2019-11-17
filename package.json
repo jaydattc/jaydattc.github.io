@@ -11,7 +11,9 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "dependencies": {
     "@chakra-ui/core": "^0.4.0",
@@ -24,16 +26,16 @@
     "react-icons": "^3.8.0"
   },
   "devDependencies": {
-    "fs-extra": "^8.1.0",
     "babel-eslint": "^10.0.3",
     "eslint-config-react-app": "^5.0.2",
     "gatsby-plugin-eslint": "^2.0.5",
     "gatsby-plugin-root-import": "^2.0.5",
+    "gh-pages": "^2.1.1",
     "prettier": "^1.18.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jaydattc/jaydattc.github.io"
   },
-  "homepage": "http://jaydatt.me/"
+  "homepage": "http://www.jaydatt.me/"
 }
