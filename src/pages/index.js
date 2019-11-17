@@ -29,7 +29,6 @@ const Home = props => {
               linear-gradient(to right, #59c173, #6c5b7b, #c06c84);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-fill-color: transparent;
             background-clip: text;
             background-attachment: fixed;
           `}
@@ -46,7 +45,6 @@ const Home = props => {
             fontFamily={theme.fonts.subheading}
             color={theme.colors.subheading}
             css={css`
-              text-fill-color: #c06c84;
               -webkit-text-fill-color: #c06c84;
               transition: all 0.3s linear;
               text-shadow: ${theme.customTextShadow};
@@ -59,14 +57,11 @@ const Home = props => {
           </Heading>
         </Heading>
         <Text fontSize="lg" textAlign="center">
-          I like to code
+          Fullstack Engineer
           <span role="img" aria-label="programmer">
             👨‍💻
-          </span>
-          , learn about music
-          <span role="img" aria-label="music">
-            🎼
-          </span>
+          </span>{" "}
+          | Designer🔸
         </Text>
       </Box>
     </Layout>
