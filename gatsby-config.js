@@ -1,9 +1,20 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
+require("dotenv").config()
+const path = require("path")
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: "Jaydattsinh Champavat",
+    description: "Web Developer and Designer",
+    author: "@jaydattc",
+  },
+  plugins: [
+    "gatsby-plugin-eslint",
+    {
+      resolve: "gatsby-plugin-root-import",
+      options: {
+        "@": __dirname,
+        src: path.join(__dirname, "src"),
+      },
+    },
+  ],
 }
