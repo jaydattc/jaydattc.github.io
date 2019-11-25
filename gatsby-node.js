@@ -1,17 +1,7 @@
 const path = require("path")
 const fs = require("fs-extra")
 
+// write custom domain CNAME file for gh-pages
 exports.onPostBuild = async function() {
-  try {
-    await fs.copy(
-      path.join(__dirname, "public"),
-      path.join(__dirname, "/docs/")
-    )
-  } catch (err) {
-    if (err) {
-      console.error(err)
-    } else {
-      console.log("copied to docs!")
-    }
-  }
+  await fs.writeFile(path.join(__dirname, "public/CNAME"), "www.jaydatt.me")
 }
