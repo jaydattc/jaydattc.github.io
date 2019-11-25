@@ -7,7 +7,7 @@ const Home = props => {
   return (
     <ThemeProvider>
       <Layout>
-        <Box />
+        <Box p="20px">I'll be starting to write soon, thanks</Box>
       </Layout>
     </ThemeProvider>
   )

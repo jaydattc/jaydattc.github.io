@@ -66,7 +66,7 @@ const ContactList = props => (
     <ListItem alignItems="center">
       <Tooltip shouldWrapChildren hasArrow placement="top" label="Email">
         <a
-          href="mailto:jaydatt@jaydatt.me?subject=So I was on your website and..."
+          href="mailto:jaydattc@gmail.com?subject=So I was on your website and..."
           target="_blank"
           rel="nofollow noopener noreferrer"
         >

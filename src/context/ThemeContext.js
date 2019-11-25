@@ -17,12 +17,12 @@ const customDarkTheme = {
   themeType: "dark",
   transition: "all 0.3s linear",
   fonts: {
-    body: "'Josefin Sans', sans-serif",
-    heading: "'Staatliches', sans-serif",
+    body: "Josefin Sans, sans-serif",
+    heading: "Staatliches, sans-serif",
     mono: "Menlo, monospace",
   },
   customTextShadow: `3px 3px rgba(246, 135, 176, 0.2)`,
-  customBg: `url("./topography-bg.svg"), linear-gradient(110deg, #232526, #414345)`,
+  customBg: `url("../../../../../topography-bg.svg"), linear-gradient(110deg, #232526, #414345)`,
   colors: {
     ...defaultTheme.colors,
     content: "gray.100",
@@ -39,12 +39,12 @@ const customLightTheme = {
   themeType: "light",
   transition: "all 0.3s linear",
   fonts: {
-    body: "'Josefin Sans', sans-serif",
-    heading: "'Staatliches', sans-serif",
+    body: "Josefin Sans, sans-serif",
+    heading: "Staatliches, sans-serif",
     mono: "Menlo, monospace",
   },
   customTextShadow: `3px 3px rgba(246, 135, 176, 0.4)`,
-  customBg: `url("./topography-bg.svg"), linear-gradient(110deg, #c9d6ff, #e2e2e2)`,
+  customBg: `url("../../../../../topography-bg.svg"), linear-gradient(110deg, #c9d6ff, #e2e2e2)`,
   colors: {
     ...defaultTheme.colors,
     content: "gray.800",
@@ -58,18 +58,18 @@ const customLightTheme = {
 // export const ThemeContext = React.createContext(customDarkTheme)
 
 const CustomThemeProvider = props => {
-  const [theme, setTheme] = useState(customDarkTheme)
+  const [theme, setTheme] = useState(customLightTheme)
   useEffect(() => {
     const currentTheme = localStorage.getItem("theme")
     if (supportsDarkMode() && !currentTheme) {
-      setTheme(customDarkTheme)
       localStorage.setItem("theme", "dark")
+      setTheme(customDarkTheme)
     } else if (currentTheme === "light") {
-      setTheme(customLightTheme)
       localStorage.setItem("theme", "light")
+      setTheme(customLightTheme)
     } else if (currentTheme === "dark") {
-      setTheme(customDarkTheme)
       localStorage.setItem("theme", "dark")
+      setTheme(customDarkTheme)
     }
   }, [])
 

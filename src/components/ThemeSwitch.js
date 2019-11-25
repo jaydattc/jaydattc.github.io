@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { useTheme, Tooltip, Switch, Box } from "@chakra-ui/core"
+import React from "react"
+import { useTheme, Tooltip, Switch } from "@chakra-ui/core"
 
 const ThemeSwitch = props => {
   const theme = useTheme()

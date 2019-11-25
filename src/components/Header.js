@@ -1,13 +1,9 @@
 import React from "react"
-import { FiMenu, FiHome, FiInfo, FiMail, FiBook } from "react-icons/fi"
 import {
   Box,
   Heading,
   Button,
   Drawer,
-  List,
-  ListItem,
-  ListIcon,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
@@ -16,7 +12,8 @@ import {
   useDisclosure,
 } from "@chakra-ui/core"
 import { Link } from "gatsby"
-
+import { FiMenu } from "react-icons/fi"
+import HeaderNavList from "./HeaderNavList"
 import ContactList from "./ContactList"
 
 const Header = props => {
@@ -65,38 +62,13 @@ const Header = props => {
           boxShadow="md"
           bgImage={"linear-gradient(to right, #12c2e9, #c471ed, #f64f59)"}
         />
-        <List
+        <HeaderNavList
           color={theme.colors.subheading}
           d={["none", "none", "flex", "flex"]}
           alignItems="center"
-          flexDirection="row"
+          flexDirection={["row", "column", "column", "column"]}
           fontSize={["md", "md", "md", "md"]}
-        >
-          <ListItem alignItems="center">
-            <Link to="/">
-              <ListIcon d="inline" mr={"4px"} as={FiHome} />
-              Home
-            </Link>
-          </ListItem>
-          <ListItem alignItems="center" ml={4}>
-            <Link to="/blog">
-              <ListIcon d="inline" mr={"4px"} as={FiBook} />
-              Blog
-            </Link>
-          </ListItem>
-          <ListItem alignItems="center" ml={4}>
-            <Link to="/about">
-              <ListIcon d="inline" mr={"4px"} as={FiInfo} />
-              About
-            </Link>
-          </ListItem>
-          <ListItem alignItems="center" ml={4}>
-            <Link to="/contact">
-              <ListIcon d="inline" mr={"4px"} as={FiMail} />
-              Contact
-            </Link>
-          </ListItem>
-        </List>
+        />
         <Button
           ref={btnRef}
           d={["flex", "flex", "none", "none"]}
@@ -120,37 +92,12 @@ const Header = props => {
             <DrawerHeader color={theme.colors.content}>
               Navigation Menu
             </DrawerHeader>
-            <List
+            <HeaderNavList
               color={theme.colors.subheading}
               p={4}
               fontSize="md"
               spacing={3}
-            >
-              <ListItem w="100%">
-                <Link to="/">
-                  <ListIcon as={FiHome} />
-                  Home
-                </Link>
-              </ListItem>
-              <ListItem w="100%">
-                <Link to="/blog">
-                  <ListIcon as={FiBook} />
-                  Blog
-                </Link>
-              </ListItem>
-              <ListItem w="100%">
-                <Link to="/about">
-                  <ListIcon as={FiInfo} />
-                  About
-                </Link>
-              </ListItem>
-              <ListItem w="100%">
-                <Link to="/contact">
-                  <ListIcon as={FiMail} />
-                  Contact
-                </Link>
-              </ListItem>
-            </List>
+            />
             <ContactList
               w="100%"
               d={["flex", "flex", "none", "none"]}

@@ -6,8 +6,7 @@ import ThemeSwitch from "./ThemeSwitch"
 const Layout = props => {
   const { children } = props
   const theme = useTheme()
-  // const [colorMode, toggleColorMode] = useColorMode()
-  // console.log(useColorMode())
+
   return (
     <Grid
       fontFamily={theme.fonts.body}
