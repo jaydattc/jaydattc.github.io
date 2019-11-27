@@ -47,7 +47,7 @@ const Home = props => {
             p="relative"
             src={portrait}
             alt="Jaydatt"
-            w={["150px", "200px", "230px", "250px"]}
+            w={["200px", "220px", "230px", "250px"]}
             m="auto"
             onLoad="this.disp"
             alignSelf="center"
@@ -57,7 +57,7 @@ const Home = props => {
           />
           <Heading
             fontWeight="700"
-            fontSize="6xl"
+            fontSize="4.25rem"
             color={theme.colors.heading}
             fontFamily={theme.fonts.heading}
             textAlign="center"

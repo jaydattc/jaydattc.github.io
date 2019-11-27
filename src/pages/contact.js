@@ -2,11 +2,26 @@ import React from "react"
 import { Box, Heading, Text, useTheme, Link as A } from "@chakra-ui/core"
 import Layout from "@/src/components/Layout"
 import { CustomThemeProvider as ThemeProvider } from "@/src/context/ThemeContext"
+import Helmet from "react-helmet"
 
 const Contact = props => {
   const theme = useTheme()
   return (
     <Layout>
+      <Helmet
+        title="Jaydattsinh Champavat - Contact"
+        meta={[
+          {
+            name: "description",
+            content: "Contact me",
+          },
+          {
+            name: "keywords",
+            content:
+              "engineer, developer, frontend engineer, backend developer, fullstack developer, fullstack designer",
+          },
+        ]}
+      />
       <Box
         p="20px"
         m="auto"
@@ -37,7 +52,8 @@ const Contact = props => {
             href="mailto:jaydatt@jaydatt.me?subject=So I was on your website and..."
           >
             jaydatt@jaydatt.me
-          </A>.
+          </A>
+          .
         </Text>
       </Box>
     </Layout>

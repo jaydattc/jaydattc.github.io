@@ -4,11 +4,26 @@ import Layout from "@/src/components/Layout"
 import { CustomThemeProvider as ThemeProvider } from "@/src/context/ThemeContext"
 import CustomHeading from "../components/CustomHeading"
 import Container from "../components/Container"
+import Helmet from "react-helmet"
 
 const About = props => {
   const theme = useTheme()
   return (
     <Layout>
+      <Helmet
+        title="Jaydattsinh Champavat - About me"
+        meta={[
+          {
+            name: "description",
+            content: "About me",
+          },
+          {
+            name: "keywords",
+            content:
+              "engineer, developer, frontend engineer, backend developer, fullstack developer, fullstack designer",
+          },
+        ]}
+      />
       <Container>
         <CustomHeading
           fontFamily={theme.fonts.heading}
@@ -20,13 +35,13 @@ const About = props => {
         <Text pb="10px">
           I am an undergrad student at Silver Oak College of Engineering and
           Technology pursuing Computer Engineering. I have been developing
-          performant and cutting-edge Web applications and Web based Solutions
-          with industry forefront tools and frameworks for +2 years.
+          performant Web applications and Web based Solutions with industry
+          forefront tools and frameworks for +2 years.
         </Text>
         <Text>
           I specialize in functional programming paradigms and data structures.
           On this website, I'll post details about my projects and share some of
-          interesting quirks and I come across.
+          interesting things I come across.
         </Text>
       </Container>
       <Container py="0">
