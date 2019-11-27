@@ -23,6 +23,7 @@ const customDarkTheme = {
   },
   customTextShadow: `3px 3px rgba(246, 135, 176, 0.2)`,
   customBg: `url("../../../../../topography-bg.svg"), linear-gradient(110deg, #232526, #414345)`,
+  portraitFilter: "",
   colors: {
     ...defaultTheme.colors,
     content: "gray.100",
@@ -45,6 +46,7 @@ const customLightTheme = {
   },
   customTextShadow: `3px 3px rgba(246, 135, 176, 0.4)`,
   customBg: `url("../../../../../topography-bg.svg"), linear-gradient(110deg, #c9d6ff, #e2e2e2)`,
+  portraitFilter: "drop-shadow(0px 8px 15px rgba(75.3, 42.4, 51.8, 0.8))",
   colors: {
     ...defaultTheme.colors,
     content: "gray.800",

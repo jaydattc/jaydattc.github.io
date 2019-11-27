@@ -1,17 +1,21 @@
 {
-  "name": "jaydattc.github.io",
+  "name": "jaydatt.me",
   "private": true,
-  "description": "Portfolio website of Jaydattsinh Champavat",
-  "version": "0.1.0",
+  "author": "Jaydatt Champavat <jaydatt@jaydatt.me>",
+  "description": "Portfolio website of Jaydatt Champavat",
+  "version": "1.0.0",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaydatt/Portfolio/issues"
+  },
   "scripts": {
     "clean-cache": "rm -rf .cache/ public/",
-    "build": "gatsby build",
+    "build": "rm -rf public && rm -rf .cache && gatsby build",
     "develop": "gatsby develop -p 3333",
     "format": "prettier --write \"**/*.{js,jsx,css,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "deploy": "gatsby build && gh-pages -d public -b master",
+    "deploy": "gatsby build && now --prod",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "dependencies": {
@@ -32,12 +36,12 @@
     "eslint-config-react-app": "^5.0.2",
     "gatsby-plugin-eslint": "^2.0.5",
     "gatsby-plugin-root-import": "^2.0.5",
-    "gh-pages": "^2.1.1",
+    "now": "^16.6.0",
     "prettier": "^1.18.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaydattc/jaydattc.github.io"
+    "url": "https://github.com/jaydattc/Portfolio"
   },
   "homepage": "http://www.jaydatt.me/"
 }

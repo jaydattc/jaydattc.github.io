@@ -1,7 +1,6 @@
 import React from "react"
 import { Grid, Box, useTheme } from "@chakra-ui/core"
 import Header from "@/src/components/Header"
-import ThemeSwitch from "./ThemeSwitch"
 
 const Layout = props => {
   const { children } = props
@@ -36,7 +35,6 @@ const Layout = props => {
       >
         {children}
       </Box>
-      <ThemeSwitch />
     </Grid>
   )
 }

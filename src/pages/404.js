@@ -34,7 +34,7 @@ const Page404 = () => {
         >
           Oops,
         </Heading>
-        <Text fontSize="lg">
+        <Text fontSize="lg" textAlign="center">
           Looks like you're lost, Go to{" "}
           <Text as="span" color="cadetblue">
             <Link to="/">Home</Link>

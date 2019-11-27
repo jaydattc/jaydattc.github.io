@@ -15,6 +15,7 @@ import { Link } from "gatsby"
 import { FiMenu } from "react-icons/fi"
 import HeaderNavList from "./HeaderNavList"
 import ContactList from "./ContactList"
+import ThemeSwitch from "./ThemeSwitch"
 
 const Header = props => {
   const theme = useTheme()
@@ -107,10 +108,12 @@ const Header = props => {
               theme={theme}
               margin="10px 0 10px 0"
             />
+            <ThemeSwitch />
           </DrawerContent>
         </Drawer>
       </Box>
       <ContactList theme={theme} margin="0 0 20px 0" />
+      <ThemeSwitch display={["none", "none", "flex", "flex"]} />
     </Box>
   )
 }

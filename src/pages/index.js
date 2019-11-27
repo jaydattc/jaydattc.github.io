@@ -1,12 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
-import {
-  Box,
-  useTheme,
-  Heading,
-  Text,
-  Link as AnchorLink,
-} from "@chakra-ui/core"
+import { Box, useTheme, Image, Heading, Text, Link as A } from "@chakra-ui/core"
 import { Link } from "gatsby"
 import Layout from "@/src/components/Layout"
 import Helmet from "react-helmet"
@@ -39,13 +33,24 @@ const Home = props => {
         display="flex"
         flexDir="column"
       >
-        <Box flex="1">
+        <Box flex="1" alignItems="center" justifyContent="center">
+          <Image
+            p="relative"
+            src="portrait.png"
+            alt="Jaydatt"
+            w={["150px", "200px", "230px", "250px"]}
+            m="auto"
+            alignSelf="center"
+            css={css`
+              filter: ${theme.portraitFilter};
+            `}
+          />
           <Heading
             fontWeight="700"
-            fontSize="6rem"
-            textAlign="center"
+            fontSize="4rem"
             color={theme.colors.heading}
             fontFamily={theme.fonts.heading}
+            textAlign="center"
             css={css`
               align-items: center;
               background: url("./topography-bg.svg"),
@@ -58,11 +63,10 @@ const Home = props => {
           >
             Hello,
             <br />
-            <Heading fontSize="3rem" fontWeight="400" as="p">
+            <Heading fontSize="2rem" fontWeight="400" as="p">
               I am{" "}
               <Heading
                 as="span"
-                fontSize="3rem"
                 fontWeight="400"
                 css={css`
                   -webkit-text-fill-color: #c06c84;
@@ -78,39 +82,39 @@ const Home = props => {
               </Heading>
             </Heading>
           </Heading>
-          <Text fontSize="lg" pb="20px" textAlign="center">
-            Fullstack Engineer
+          <Text pb="20px" textAlign="center">
+            Fullstack Developer
             <span role="img" aria-label="programmer">
               👨‍💻
             </span>{" "}
-            | Designer🔻
+            & Designer🔻
           </Text>
-          <Text fontSize="lg" textAlign="center">
+          <Text textAlign="center">
             Take a look at{" "}
-            <AnchorLink color={theme.colors.subheading} as={Link} to="/work">
+            <A color={theme.colors.subheading} as={Link} to="/work">
               my work
-            </AnchorLink>
+            </A>
             ,{" "}
-            <AnchorLink color={theme.colors.subheading} as={Link} to="/blog">
+            <A color={theme.colors.subheading} as={Link} to="/blog">
               read my blog
-            </AnchorLink>{" "}
+            </A>{" "}
             or{" "}
-            <AnchorLink color={theme.colors.subheading} as={Link} to="/contact">
+            <A color={theme.colors.subheading} as={Link} to="/contact">
               get in touch
-            </AnchorLink>
+            </A>
             !
           </Text>
         </Box>
         <Text textAlign="center">
           created with ❤ and{" "}
-          <AnchorLink
+          <A
             color={theme.colors.subheading}
             href="https://www.gatsbyjs.org/"
             isExternal
             title="Gatsby - static site generator"
           >
             gatsby
-          </AnchorLink>
+          </A>
         </Text>
       </Box>
     </Layout>
