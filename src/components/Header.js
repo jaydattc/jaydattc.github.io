@@ -3,6 +3,7 @@ import {
   Box,
   Heading,
   Button,
+  Link,
   Drawer,
   DrawerHeader,
   DrawerOverlay,
@@ -11,8 +12,8 @@ import {
   useTheme,
   useDisclosure,
 } from "@chakra-ui/core"
-import { Link } from "gatsby"
-import { FiMenu } from "react-icons/fi"
+import { Link as GatsbyLink } from "gatsby"
+import { FiMenu, FiSun, FiMoon } from "react-icons/fi"
 import HeaderNavList from "./HeaderNavList"
 import ContactList from "./ContactList"
 import ThemeSwitch from "./ThemeSwitch"
@@ -43,7 +44,7 @@ const Header = props => {
         height="100%"
         width="100%"
       >
-        <Link to="/">
+        <Link as={GatsbyLink} to="/">
           <Heading
             fontWeight="400"
             fontSize={["xl", "2xl", "3xl", "4xl"]}
@@ -70,17 +71,32 @@ const Header = props => {
           flexDirection={["row", "column", "column", "column"]}
           fontSize={["md", "md", "md", "md"]}
         />
-        <Button
-          ref={btnRef}
-          d={["flex", "flex", "none", "none"]}
-          variantColor={"transparent"}
-          fontSize="2xl"
-          p={"auto"}
-          m={0}
-          onClick={onOpen}
-        >
-          <Box as={FiMenu} color={theme.colors.content} />
-        </Button>
+        <Box d="flex" flexDir="row">
+          <Button
+            d={["flex", "flex", "none", "none"]}
+            variantColor={"transparent"}
+            fontSize="2xl"
+            p={"auto"}
+            m={0}
+            onClick={() => theme.toggleTheme()}
+          >
+            <Box
+              as={theme.type !== "light" ? FiSun : FiMoon}
+              color={theme.colors.content}
+            />
+          </Button>
+          <Button
+            ref={btnRef}
+            d={["flex", "flex", "none", "none"]}
+            variantColor={"transparent"}
+            fontSize="2xl"
+            p={"auto"}
+            m={0}
+            onClick={onOpen}
+          >
+            <Box as={FiMenu} color={theme.colors.content} />
+          </Button>
+        </Box>
         <Drawer
           isOpen={isOpen}
           placement="top"
@@ -108,7 +124,6 @@ const Header = props => {
               theme={theme}
               margin="10px 0 10px 0"
             />
-            <ThemeSwitch />
           </DrawerContent>
         </Drawer>
       </Box>

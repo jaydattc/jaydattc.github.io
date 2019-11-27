@@ -1,10 +1,19 @@
 import React from "react"
 import { css } from "@emotion/core"
-import { Box, useTheme, Image, Heading, Text, Link as A } from "@chakra-ui/core"
+import {
+  Box,
+  useTheme,
+  Image,
+  Heading,
+  Text,
+  Link as A,
+  Icon,
+} from "@chakra-ui/core"
 import { Link } from "gatsby"
 import Layout from "@/src/components/Layout"
 import Helmet from "react-helmet"
 import { CustomThemeProvider as ThemeProvider } from "@/src/context/ThemeContext"
+import portrait from "@/static/portrait.png"
 
 const Home = props => {
   const theme = useTheme()
@@ -36,10 +45,11 @@ const Home = props => {
         <Box flex="1" alignItems="center" justifyContent="center">
           <Image
             p="relative"
-            src="portrait.png"
+            src={portrait}
             alt="Jaydatt"
             w={["150px", "200px", "230px", "250px"]}
             m="auto"
+            onLoad="this.disp"
             alignSelf="center"
             css={css`
               filter: ${theme.portraitFilter};
@@ -47,7 +57,7 @@ const Home = props => {
           />
           <Heading
             fontWeight="700"
-            fontSize="4rem"
+            fontSize="6xl"
             color={theme.colors.heading}
             fontFamily={theme.fonts.heading}
             textAlign="center"
@@ -63,9 +73,10 @@ const Home = props => {
           >
             Hello,
             <br />
-            <Heading fontSize="2rem" fontWeight="400" as="p">
+            <Heading fontSize="4xl" fontWeight="400" as="p">
               I am{" "}
               <Heading
+                fontSize="4xl"
                 as="span"
                 fontWeight="400"
                 css={css`
@@ -82,15 +93,19 @@ const Home = props => {
               </Heading>
             </Heading>
           </Heading>
-          <Text pb="20px" textAlign="center">
+          <Text m="20px" textAlign="center">
             Fullstack Developer
             <span role="img" aria-label="programmer">
               👨‍💻
             </span>{" "}
             & Designer🔻
           </Text>
-          <Text textAlign="center">
-            Take a look at{" "}
+          <Text mb="20px" textAlign="center">
+            Read{" "}
+            <A color={theme.colors.subheading} as={Link} to="/about">
+              about me
+            </A>
+            , take a look at{" "}
             <A color={theme.colors.subheading} as={Link} to="/work">
               my work
             </A>
@@ -114,6 +129,7 @@ const Home = props => {
             title="Gatsby - static site generator"
           >
             gatsby
+            <Icon name="external-link" mx="2px" />
           </A>
         </Text>
       </Box>

@@ -7,14 +7,9 @@ import {
 } from "@chakra-ui/core"
 import "@/src/styles/global.css"
 
-// Getting dark mode information from OS!
-// may need macOS Mojave + Safari Technology Preview Release 68 to test this currently.
-const supportsDarkMode = () =>
-  window.matchMedia("(prefers-color-scheme: dark)").matches === true
-
 const customDarkTheme = {
   ...defaultTheme,
-  themeType: "dark",
+  type: "dark",
   transition: "all 0.3s linear",
   fonts: {
     body: "Josefin Sans, sans-serif",
@@ -37,7 +32,7 @@ const customDarkTheme = {
 
 const customLightTheme = {
   ...defaultTheme,
-  themeType: "light",
+  type: "light",
   transition: "all 0.3s linear",
   fonts: {
     body: "Josefin Sans, sans-serif",
@@ -60,35 +55,39 @@ const customLightTheme = {
 // export const ThemeContext = React.createContext(customDarkTheme)
 
 const CustomThemeProvider = props => {
-  const [theme, setTheme] = useState(customLightTheme)
+  const [theme, setTheme] = useState(customDarkTheme)
   useEffect(() => {
-    const currentTheme = localStorage.getItem("theme")
-    if (supportsDarkMode() && !currentTheme) {
-      localStorage.setItem("theme", "dark")
-      setTheme(customDarkTheme)
-    } else if (currentTheme === "light") {
+    if (window.__theme === "light") {
       localStorage.setItem("theme", "light")
       setTheme(customLightTheme)
-    } else if (currentTheme === "dark") {
+    } else if (window.__theme === "dark") {
       localStorage.setItem("theme", "dark")
       setTheme(customDarkTheme)
+    }
+    window.__onThemeChange = () => {
+      if (window.__theme === "light") setTheme(customDarkTheme)
+      else if (window.__theme === "dark") setTheme(customLightTheme)
     }
   }, [])
 
   const toggleTheme = () => {
-    if (theme.themeType === "light") {
-      setTheme(customDarkTheme)
+    if (theme.type === "light") {
+      window.__theme = "dark"
       localStorage.setItem("theme", "dark")
-    } else if (theme.themeType === "dark") {
-      setTheme(customLightTheme)
+      setTheme(customDarkTheme)
+    } else if (theme.type === "dark") {
+      window.__theme = "light"
       localStorage.setItem("theme", "light")
+      setTheme(customLightTheme)
     }
   }
 
   return (
     <ThemeProvider theme={{ ...theme, toggleTheme }}>
       <CSSReset />
-      <ColorModeProvider>{props.children}</ColorModeProvider>
+      <ColorModeProvider>
+        {theme !== null ? props.children : <div></div>}
+      </ColorModeProvider>
     </ThemeProvider>
   )
 }

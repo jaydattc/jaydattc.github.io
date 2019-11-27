@@ -1,13 +1,13 @@
 import React from "react"
-import { List, ListItem, ListIcon } from "@chakra-ui/core"
-import { Link } from "gatsby"
+import { List, Link, ListItem, ListIcon } from "@chakra-ui/core"
+import { Link as GatsbyLink } from "gatsby"
 import { FiHome, FiInfo, FiMail, FiBook, FiCode } from "react-icons/fi"
 
 const HeaderNavItem = props => {
   const { linkIcon, to, linkText } = props
   return (
     <ListItem m="5px" fontSize="1.2rem" alignItems="center">
-      <Link to={to}>
+      <Link as={GatsbyLink} to={to}>
         <ListIcon d="inline" as={linkIcon} />
         {linkText}
       </Link>

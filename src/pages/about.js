@@ -1,13 +1,5 @@
 import React from "react"
-import {
-  Flex,
-  Box,
-  Heading,
-  Text,
-  useTheme,
-  List,
-  ListItem,
-} from "@chakra-ui/core"
+import { Flex, Box, Text, useTheme, List, ListItem } from "@chakra-ui/core"
 import Layout from "@/src/components/Layout"
 import { CustomThemeProvider as ThemeProvider } from "@/src/context/ThemeContext"
 import CustomHeading from "../components/CustomHeading"
@@ -47,11 +39,20 @@ const About = props => {
         border="solid 1px"
         borderRadius={5}
         bg="rgba(27, 27, 27, 0.2)"
-        p="5px"
         wrap="wrap"
-        justifyContent="space-around"
+        justifyContent={[
+          "space-between",
+          "space-between",
+          "space-around",
+          "space-around",
+        ]}
       >
-        <Box d="flex" flexDir="column">
+        <Box
+          m="10px"
+          w={["100%", "100%", "auto", "auto"]}
+          d="flex"
+          flexDir="column"
+        >
           <Text
             color={theme.colors.subheading}
             textAlign="center"
@@ -69,7 +70,12 @@ const About = props => {
             <ListItem>Python</ListItem>
           </List>
         </Box>
-        <Box d="flex" flexDir="column">
+        <Box
+          m="10px"
+          w={["100%", "100%", "auto", "auto"]}
+          d="flex"
+          flexDir="column"
+        >
           <Text
             color={theme.colors.subheading}
             textAlign="center"
@@ -86,7 +92,12 @@ const About = props => {
             <ListItem>React Native</ListItem>
           </List>
         </Box>
-        <Box d="flex" flexDir="column">
+        <Box
+          m="10px"
+          w={["100%", "100%", "auto", "auto"]}
+          d="flex"
+          flexDir="column"
+        >
           <Text
             color={theme.colors.subheading}
             textAlign="center"

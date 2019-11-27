@@ -6,15 +6,17 @@ const ThemeSwitch = props => {
 
   return (
     <Box d="flex" flexDir="row" m="10px" {...props}>
-      <FormLabel htmlFor="theme-switch" color={theme.colors.content} px="8px">
-        {theme.themeType === "dark"
-          ? "Switch to Light Mode: "
-          : "Switch to Dark Mode: "}
-      </FormLabel>
+      {!props.noLabel && (
+        <FormLabel htmlFor="theme-switch" color={theme.colors.content} px="8px">
+          {theme.type === "dark"
+            ? "Switch to Light Mode: "
+            : "Switch to Dark Mode: "}
+        </FormLabel>
+      )}
       <Switch
         id="theme-switch"
         onChange={() => theme.toggleTheme()}
-        isChecked={theme.themeType !== "dark"}
+        isChecked={theme.type !== "dark"}
       />
     </Box>
   )

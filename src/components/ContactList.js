@@ -1,6 +1,6 @@
 import React from "react"
 import { FiGithub, FiTwitter, FiLinkedin, FiMail } from "react-icons/fi"
-import { List, ListItem, ListIcon, Tooltip } from "@chakra-ui/core"
+import { List, Link, ListItem, ListIcon, Tooltip } from "@chakra-ui/core"
 
 const ContactList = props => (
   <List
@@ -12,65 +12,50 @@ const ContactList = props => (
     {...props}
   >
     <ListItem alignItems="center">
-      <Tooltip
-        shouldWrapChildren
-        hasArrow
-        placement="top"
-        label="Github Profile"
-      >
-        <a
+      <Tooltip hasArrow placement="top" label="Github Profile">
+        <Link
           id="github-profile-link"
           href="https://github.com/jaydattc/"
           target="_blank"
           rel="nofollow noopener noreferrer"
         >
           <ListIcon as={FiGithub} />
-        </a>
+        </Link>
       </Tooltip>
     </ListItem>
     <ListItem alignItems="center">
-      <Tooltip
-        shouldWrapChildren
-        hasArrow
-        placement="top"
-        label="Twitter Profile"
-      >
-        <a
+      <Tooltip hasArrow placement="top" label="Twitter Profile">
+        <Link
           id="twitter-profile-link"
           href="https://www.twitter.com/Cjaydatt/"
           target="_blank"
           rel="nofollow noopener noreferrer"
         >
           <ListIcon as={FiTwitter} />
-        </a>
+        </Link>
       </Tooltip>
     </ListItem>
 
     <ListItem alignItems="center">
-      <Tooltip
-        shouldWrapChildren
-        hasArrow
-        placement="top"
-        label="LinkedIn Profile"
-      >
-        <a
+      <Tooltip hasArrow placement="top" label="LinkedIn Profile">
+        <Link
           id="linkedin-profile-link"
           href="https://www.linkedin.com/in/jaydattc/"
           target="_blank"
           rel="nofollow noopener noreferrer"
         >
           <ListIcon as={FiLinkedin} />
-        </a>
+        </Link>
       </Tooltip>
     </ListItem>
     <ListItem alignItems="center">
-      <Tooltip shouldWrapChildren hasArrow placement="top" label="Email">
-        <a
+      <Tooltip hasArrow placement="top" label="Email">
+        <Link
           href="mailto:jaydatt@jaydatt.me?subject=So I was on your website and..."
           rel="nofollow noopener noreferrer"
         >
           <ListIcon as={FiMail} />
-        </a>
+        </Link>
       </Tooltip>
     </ListItem>
   </List>

@@ -6,11 +6,11 @@
   "version": "1.0.0",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jaydatt/Portfolio/issues"
+    "url": "https://github.com/jaydatt/jaydatt.me/issues"
   },
   "scripts": {
     "clean-cache": "rm -rf .cache/ public/",
-    "build": "rm -rf public && rm -rf .cache && gatsby build",
+    "build": "gatsby build",
     "develop": "gatsby develop -p 3333",
     "format": "prettier --write \"**/*.{js,jsx,css,json,md}\"",
     "start": "npm run develop",
@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaydattc/Portfolio"
+    "url": "https://github.com/jaydattc/jaydatt.me"
   },
   "homepage": "http://www.jaydatt.me/"
 }
