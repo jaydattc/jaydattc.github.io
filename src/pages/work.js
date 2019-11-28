@@ -24,8 +24,7 @@ const Work = props => {
           },
         ]}
       />
-
-      <Container>
+      <Container h="100%">
         <CustomHeading
           fontFamily={theme.fonts.heading}
           textShadow={theme.customTextShadow}
@@ -44,8 +43,12 @@ const Work = props => {
         <Stack>
           <Box>
             <Text fontSize="2xl">Samaj Infotech Pvt. Ltd.</Text>
-            <Text fontSize="md">Jr. Developer</Text>
-            <Text fontSize="md">June 2019 - November 2019</Text>
+            <Text fontStyle="italic" fontSize="md">
+              Jr. NodeJS Developer
+            </Text>
+            <Text fontStyle="italic" fontSize="md">
+              June 2019 - November 2019
+            </Text>
           </Box>
         </Stack>
       </Container>

@@ -5,9 +5,9 @@ const ThemeSwitch = props => {
   const theme = useTheme()
 
   return (
-    <Box d="flex" flexDir="row" m="10px" {...props}>
+    <Box d="flex" flexDir="row" my="10px" {...props}>
       {!props.noLabel && (
-        <FormLabel htmlFor="theme-switch" color={theme.colors.content} px="8px">
+        <FormLabel htmlFor="theme-switch" fontSize="sm" color={theme.colors.content} px="8px">
           {theme.type === "dark"
             ? "Switch to Light Mode: "
             : "Switch to Dark Mode: "}

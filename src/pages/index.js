@@ -119,6 +119,16 @@ const Home = props => {
             </A>
             !
           </Text>
+          <Text textAlign="center">
+            Get my{" "}
+            <A
+              color={theme.colors.subheading}
+              href="../../../resume.pdf"
+              target="__blank"
+            >
+              resume!
+            </A>
+          </Text>
         </Box>
         <Text textAlign="center">
           created with ❤ and{" "}

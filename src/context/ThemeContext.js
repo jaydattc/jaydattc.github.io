@@ -49,7 +49,7 @@ const customLightTheme = {
     subheading: "purple.600",
     drawerBg: "gray.300",
     headerBg: "rgba(10,10,10,0.1)",
-    contentBg: "#EDEDED",
+    contentBg: "#FFFAFA",
   },
 }
 // export const ThemeContext = React.createContext(customDarkTheme)

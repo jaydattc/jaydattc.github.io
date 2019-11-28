@@ -6,7 +6,7 @@ import { FiHome, FiInfo, FiMail, FiBook, FiCode } from "react-icons/fi"
 const HeaderNavItem = props => {
   const { linkIcon, to, linkText } = props
   return (
-    <ListItem m="5px" fontSize="1.2rem" alignItems="center">
+    <ListItem m="5px 0 0 0" fontSize="1.2rem" alignItems="center">
       <Link as={GatsbyLink} to={to}>
         <ListIcon d="inline" as={linkIcon} />
         {linkText}

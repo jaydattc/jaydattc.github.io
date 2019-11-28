@@ -58,7 +58,7 @@ const Header = props => {
         <Box
           borderRadius="sm"
           h="3px"
-          my="10px"
+          m="10px 0 5px 0"
           w="80%"
           d={["none", "none", "flex", "flex"]}
           boxShadow="md"
@@ -68,7 +68,7 @@ const Header = props => {
           color={theme.colors.subheading}
           d={["none", "none", "flex", "flex"]}
           alignItems="center"
-          flexDirection={["row", "column", "column", "column"]}
+          flexDirection={["row", "row", "column", "column"]}
           fontSize={["md", "md", "md", "md"]}
         />
         <Box d="flex" flexDir="row">
@@ -127,7 +127,7 @@ const Header = props => {
           </DrawerContent>
         </Drawer>
       </Box>
-      <ContactList theme={theme} margin="0 0 20px 0" />
+      <ContactList theme={theme} my="10px" />
       <ThemeSwitch display={["none", "none", "flex", "flex"]} />
     </Box>
   )
