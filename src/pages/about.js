@@ -1,5 +1,14 @@
 import React from "react"
-import { Flex, Box, Text, useTheme, List, ListItem } from "@chakra-ui/core"
+import {
+  Flex,
+  Box,
+  Link as A,
+  Button,
+  Text,
+  useTheme,
+  List,
+  ListItem,
+} from "@chakra-ui/core"
 import Layout from "@/src/components/Layout"
 import { CustomThemeProvider as ThemeProvider } from "@/src/context/ThemeContext"
 import CustomHeading from "../components/CustomHeading"
@@ -45,6 +54,17 @@ const About = props => {
         </Text>
       </Container>
       <Container py="0">
+        <A
+          color={theme.colors.subheading}
+          href="../resume.pdf"
+          target="__blank"
+          border="1px solid"
+          borderRadius="5px"
+          p="3px"
+          textAlign="center"
+        >
+          Get my resume!
+        </A>
         <CustomHeading fontSize="2xl" theme={theme}>
           Skills
         </CustomHeading>
