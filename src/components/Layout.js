@@ -6,6 +6,22 @@ const Layout = props => {
   const { children } = props
   const theme = useTheme()
 
+  const prev = useRef({ current: null })
+  const headerRef = useRef(null)
+  useEffect(() => {
+    prev.current = window.scrollY
+    window.addEventListener("scroll", e => handleNavigation(e))
+  }, [])
+  const handleNavigation = e => {
+    const window = e.currentTarget
+    const headerPosition = headerRef.current.style.position
+    if (prev.current > window.scrollY && headerPosition !== "sticky")
+      headerRef.current.style.position = "sticky"
+    else if (prev.current < window.scrollY && headerPosition !== "relative")
+      headerRef.current.style.position = "relative" //scrolling down
+    prev.current = window.scrollY
+  }
+
   return (
     <Grid
       fontFamily={theme.fonts.body}
