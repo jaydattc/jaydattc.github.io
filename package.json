@@ -15,7 +15,7 @@
     "format": "prettier --write \"**/*.{js,jsx,css,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "deploy": "gatsby build && cp now.json public/ && cd public/ && now --prod",
+    "deploy": "gatsby build && cp now.json public/ && cd public/ && now $(now) jaydatt.me",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "dependencies": {
