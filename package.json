@@ -40,7 +40,6 @@
     "eslint-config-react-app": "^5.0.2",
     "gatsby-plugin-eslint": "^2.0.5",
     "gatsby-plugin-root-import": "^2.0.5",
-    "now": "^16.6.0",
     "prettier": "^1.18.2"
   },
   "repository": {
