@@ -6,6 +6,9 @@
 ---
 # Features
  - Available in dark and light mode
+ - Service worker for aggressive resource caching.
+ - Convenient SEO using react-helmet and gatsby
+ - Google analytics for site stats
 
 # Used Technologies
  - [GatsbyJS](https://www.gatsbyjs.org)
