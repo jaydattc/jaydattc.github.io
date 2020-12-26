@@ -1,12 +1,12 @@
 {
-  "name": "jaydatt.me",
+  "name": "jaydattc.github.io",
   "private": true,
-  "author": "Jaydatt Champavat <jaydatt@jaydatt.me>",
+  "author": "Jaydatt Champavat <jaydattc@gmail.com>",
   "description": "Portfolio website of Jaydatt Champavat",
   "version": "1.0.0",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jaydatt/jaydatt.me/issues"
+    "url": "https://github.com/jaydatt/jaydattc.github.io/issues"
   },
   "scripts": {
     "clean-cache": "rm -rf .cache/ public/",
@@ -15,7 +15,7 @@
     "format": "prettier --write \"**/*.{js,jsx,css,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "deploy": "gatsby build && cp now.json public/ && cd public/ && now $(now) jaydatt.me",
+    "deploy": "gatsby build && cp now.json public/ && cd public/ && now --prod",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "dependencies": {
@@ -26,6 +26,7 @@
     "gatsby": "^2.15.36",
     "gatsby-plugin-google-analytics": "^2.1.29",
     "gatsby-plugin-manifest": "^2.2.29",
+    "gatsby-plugin-offline": "^3.0.31",
     "gatsby-plugin-react-helmet": "^3.1.15",
     "gatsby-plugin-sharp": "^2.3.4",
     "gatsby-plugin-sitemap": "^2.2.22",
@@ -42,9 +43,12 @@
     "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "^1.18.2"
   },
+  "engines": {
+    "node": "12.x"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaydattc/jaydatt.me"
+    "url": "https://github.com/jaydattc/jaydattc.github.io"
   },
-  "homepage": "https://www.jaydatt.me/"
+  "homepage": "https://jaydattc.github.io/"
 }

@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "name": "jaydattc.github.io",
+  "alias": "jaydattc.github.io",
   "routes": [
     {
       "src": "/static/(.*)",
@@ -17,8 +19,6 @@
       "headers": { "cache-control": "public, max-age=0, must-revalidate" }
     }
   ],
-  "name": "jaydatt.me",
-  "alias": "jaydatt.me",
   "builds": [
     {
       "use": "@now/static-build",

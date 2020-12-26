@@ -1,8 +1,8 @@
-import React from "react"
-import { FiGithub, FiTwitter, FiLinkedin, FiMail } from "react-icons/fi"
-import { List, Link, ListItem, ListIcon, Tooltip } from "@chakra-ui/core"
+import React from "react";
+import { FiGithub, FiTwitter, FiLinkedin, FiMail } from "react-icons/fi";
+import { List, Link, ListItem, ListIcon, Tooltip } from "@chakra-ui/core";
 
-const ContactList = props => (
+const ContactList = (props) => (
   <List
     color={props.theme.colors.subheading}
     d={["none", "none", "flex", "flex"]}
@@ -51,7 +51,7 @@ const ContactList = props => (
     <ListItem alignItems="center">
       <Tooltip hasArrow placement="top" label="Email">
         <Link
-          href="mailto:jaydatt@jaydatt.me?subject=So I was on your website and..."
+          href="mailto:jaydattc@gmail.com?subject=So I was on your website and..."
           rel="nofollow noopener noreferrer"
         >
           <ListIcon as={FiMail} />
@@ -59,5 +59,5 @@ const ContactList = props => (
       </Tooltip>
     </ListItem>
   </List>
-)
-export default ContactList
+);
+export default ContactList;

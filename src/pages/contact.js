@@ -42,16 +42,15 @@ const Contact = props => {
         >
           Contact me
         </Heading>
-
         <Text>
           Hey!
           <br />I am currently freelancing and taking up projects, if you would
           like to get in touch, shoot me an email at{" "}
           <A
             color={theme.colors.subheading}
-            href="mailto:jaydatt@jaydatt.me?subject=So I was on your website and..."
+            href="mailto:jaydattc@gmail.com?subject=So I was on your website and..."
           >
-            jaydatt@jaydatt.me
+            jaydattc@gmail.com
           </A>
           .
         </Text>

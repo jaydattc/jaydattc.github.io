@@ -6,7 +6,7 @@ module.exports = {
     title: "Jaydattsinh Champavat",
     description: "Web Developer and Designer",
     author: "@jaydattc",
-    siteUrl: `https://www.jaydatt.me`,
+    siteUrl: `https://jaydattc.github.io`,
   },
   plugins: [
     "gatsby-plugin-eslint",
@@ -40,5 +40,6 @@ module.exports = {
         theme_color_in_head: false,
       },
     },
+    `gatsby-plugin-offline`,
   ],
 }
