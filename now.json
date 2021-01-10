@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "name": "jaydattc.github.io",
-  "alias": "jaydattc.github.io",
+  "name": "jaydattc",
+  "alias": "jaydattc",
   "routes": [
     {
       "src": "/static/(.*)",
