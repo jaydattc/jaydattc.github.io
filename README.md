@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://jaydatt.me">Jaydatt.me</a>
+  <a href="https://jaydattc.github.io/">jaydattc.github.io</a>
 </h1>
 <p align="center">Portfolio site and blog of Jaydattsinh Champavat. Made with <a href="https://www.gatsbyjs.org">GatsbyJS</a></p>
 
