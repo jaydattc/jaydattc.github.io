@@ -6,10 +6,11 @@
 > hey stranger, this website still needs a lot of work.
 ---
 # Features
- - Available in dark and light mode
+ - Available in dark and light mode (using `window.matchMedia`).
+ - Total keyboard accessibility with [a11y](https://www.a11yproject.com/) compliance.
  - Service worker for aggressive resource caching.
- - Convenient SEO using react-helmet and gatsby
- - Google analytics for site stats
+ - Convenient SEO using react-helmet and gatsby.
+ - Google analytics for site stats.
 
 # Used Technologies
  - [GatsbyJS](https://www.gatsbyjs.org)
