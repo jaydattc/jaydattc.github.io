@@ -15,7 +15,7 @@
 # Used Technologies
  - [GatsbyJS](https://www.gatsbyjs.org)
  - [ChakraUI](https://chakra-ui.com/) (Design and Styling)
- - [Zeit](https://www.zeit.co) (CDN Hosting)
+ - ~~[Zeit](https://www.zeit.co) (CDN Hosting)~~GH Pages for now.
  - [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) for linting and formatting. 
  
 ## License
