@@ -15,11 +15,11 @@
 # Used Technologies
  - [GatsbyJS](https://www.gatsbyjs.org)
  - [ChakraUI](https://chakra-ui.com/) (Design and Styling)
- - ~~[Zeit](https://www.zeit.co) (CDN Hosting)~~GH Pages for now.
+ - ~~[Zeit](https://www.zeit.co) (CDN Hosting)~~ GH Pages for now.
  - [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) for linting and formatting. 
  
 ## License
 
 This project is available on GitHub for only for educational purposes! You are **not** allowed to use this site publicly and/or commercially.
 
-You are **not** permitted to use, modify, or share the software for any purpose other than for private educational purposes.
+You are **not** permitted to use, modify, or share the software for any purpose other than for personal educational purposes.
